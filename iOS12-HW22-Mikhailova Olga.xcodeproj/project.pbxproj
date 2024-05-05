@@ -13,6 +13,8 @@
 		0BEA7F6C2BE83BBC00EE5359 /* iOS12_HW22_Mikhailova_Olga.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F6A2BE83BBC00EE5359 /* iOS12_HW22_Mikhailova_Olga.xcdatamodeld */; };
 		0BEA7F6E2BE83BBE00EE5359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA7F6D2BE83BBE00EE5359 /* Assets.xcassets */; };
 		0BEA7F712BE83BBE00EE5359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA7F6F2BE83BBE00EE5359 /* LaunchScreen.storyboard */; };
+		0BEA7F7E2BE8407D00EE5359 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F7C2BE8407D00EE5359 /* Person+CoreDataClass.swift */; };
+		0BEA7F7F2BE8407D00EE5359 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F7D2BE8407D00EE5359 /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0BEA7F6D2BE83BBE00EE5359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BEA7F702BE83BBE00EE5359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BEA7F722BE83BBE00EE5359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BEA7F7C2BE8407D00EE5359 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0BEA7F7D2BE8407D00EE5359 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 		0BEA7F7A2BE83BF900EE5359 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0BEA7F7C2BE8407D00EE5359 /* Person+CoreDataClass.swift */,
+				0BEA7F7D2BE8407D00EE5359 /* Person+CoreDataProperties.swift */,
 				0BEA7F6A2BE83BBC00EE5359 /* iOS12_HW22_Mikhailova_Olga.xcdatamodeld */,
 			);
 			path = Model;
@@ -171,6 +177,8 @@
 			files = (
 				0BEA7F662BE83BBC00EE5359 /* ViewController.swift in Sources */,
 				0BEA7F6C2BE83BBC00EE5359 /* iOS12_HW22_Mikhailova_Olga.xcdatamodeld in Sources */,
+				0BEA7F7F2BE8407D00EE5359 /* Person+CoreDataProperties.swift in Sources */,
+				0BEA7F7E2BE8407D00EE5359 /* Person+CoreDataClass.swift in Sources */,
 				0BEA7F622BE83BBC00EE5359 /* AppDelegate.swift in Sources */,
 				0BEA7F642BE83BBC00EE5359 /* SceneDelegate.swift in Sources */,
 			);
