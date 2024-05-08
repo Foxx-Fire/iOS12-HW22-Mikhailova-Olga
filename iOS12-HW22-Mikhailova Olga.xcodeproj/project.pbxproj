@@ -14,7 +14,14 @@
 		0BEA7F6E2BE83BBE00EE5359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA7F6D2BE83BBE00EE5359 /* Assets.xcassets */; };
 		0BEA7F712BE83BBE00EE5359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA7F6F2BE83BBE00EE5359 /* LaunchScreen.storyboard */; };
 		0BEA7F7E2BE8407D00EE5359 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F7C2BE8407D00EE5359 /* Person+CoreDataClass.swift */; };
-		0BEA7F7F2BE8407D00EE5359 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F7D2BE8407D00EE5359 /* Person+CoreDataProperties.swift */; };
+		0BEA7F822BE8428600EE5359 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F812BE8428600EE5359 /* Presenter.swift */; };
+		0BEA7F852BE8429B00EE5359 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F842BE8429B00EE5359 /* Builder.swift */; };
+		0BEA7F882BE842D500EE5359 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F872BE842D500EE5359 /* DetailView.swift */; };
+		0BEA7F8B2BE842F200EE5359 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F8A2BE842F200EE5359 /* TableViewCell.swift */; };
+		0BEA7F8D2BE8430400EE5359 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F8C2BE8430400EE5359 /* TableView.swift */; };
+		0BEA7F8F2BE843DF00EE5359 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F8E2BE843DF00EE5359 /* ExtensionDate.swift */; };
+		0BEA7F912BE8441800EE5359 /* ExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F902BE8441800EE5359 /* ExtensionTextField.swift */; };
+		0BEA7F932BE8446100EE5359 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F922BE8446100EE5359 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +34,14 @@
 		0BEA7F702BE83BBE00EE5359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BEA7F722BE83BBE00EE5359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BEA7F7C2BE8407D00EE5359 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0BEA7F7D2BE8407D00EE5359 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0BEA7F812BE8428600EE5359 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		0BEA7F842BE8429B00EE5359 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		0BEA7F872BE842D500EE5359 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		0BEA7F8A2BE842F200EE5359 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0BEA7F8C2BE8430400EE5359 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		0BEA7F8E2BE843DF00EE5359 /* ExtensionDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
+		0BEA7F902BE8441800EE5359 /* ExtensionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTextField.swift; sourceTree = "<group>"; };
+		0BEA7F922BE8446100EE5359 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +75,11 @@
 			isa = PBXGroup;
 			children = (
 				0BEA7F792BE83BEA00EE5359 /* App */,
-				0BEA7F7B2BE83C0D00EE5359 /* ViewController */,
 				0BEA7F782BE83BDC00EE5359 /* Resourses */,
+				0BEA7F802BE8427200EE5359 /* Presenter */,
+				0BEA7F832BE8428B00EE5359 /* Builder */,
+				0BEA7F862BE842A700EE5359 /* Extensions */,
+				0BEA7F7B2BE83C0D00EE5359 /* ViewController */,
 				0BEA7F7A2BE83BF900EE5359 /* Model */,
 			);
 			path = "iOS12-HW22-Mikhailova Olga";
@@ -90,9 +107,8 @@
 		0BEA7F7A2BE83BF900EE5359 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0BEA7F7C2BE8407D00EE5359 /* Person+CoreDataClass.swift */,
-				0BEA7F7D2BE8407D00EE5359 /* Person+CoreDataProperties.swift */,
-				0BEA7F6A2BE83BBC00EE5359 /* iOS12_HW22_Mikhailova_Olga.xcdatamodeld */,
+				0BEA7F942BE8447B00EE5359 /* CoreDataManager */,
+				0BEA7F952BE8448900EE5359 /* Entity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,9 +116,62 @@
 		0BEA7F7B2BE83C0D00EE5359 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0BEA7F892BE842DB00EE5359 /* TableView */,
 				0BEA7F652BE83BBC00EE5359 /* ViewController.swift */,
+				0BEA7F872BE842D500EE5359 /* DetailView.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0BEA7F802BE8427200EE5359 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA7F812BE8428600EE5359 /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0BEA7F832BE8428B00EE5359 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA7F842BE8429B00EE5359 /* Builder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		0BEA7F862BE842A700EE5359 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA7F8E2BE843DF00EE5359 /* ExtensionDate.swift */,
+				0BEA7F902BE8441800EE5359 /* ExtensionTextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0BEA7F892BE842DB00EE5359 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA7F8A2BE842F200EE5359 /* TableViewCell.swift */,
+				0BEA7F8C2BE8430400EE5359 /* TableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		0BEA7F942BE8447B00EE5359 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA7F922BE8446100EE5359 /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		0BEA7F952BE8448900EE5359 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA7F7C2BE8407D00EE5359 /* Person+CoreDataClass.swift */,
+				0BEA7F6A2BE83BBC00EE5359 /* iOS12_HW22_Mikhailova_Olga.xcdatamodeld */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,11 +245,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BEA7F662BE83BBC00EE5359 /* ViewController.swift in Sources */,
+				0BEA7F912BE8441800EE5359 /* ExtensionTextField.swift in Sources */,
+				0BEA7F8F2BE843DF00EE5359 /* ExtensionDate.swift in Sources */,
+				0BEA7F882BE842D500EE5359 /* DetailView.swift in Sources */,
+				0BEA7F822BE8428600EE5359 /* Presenter.swift in Sources */,
 				0BEA7F6C2BE83BBC00EE5359 /* iOS12_HW22_Mikhailova_Olga.xcdatamodeld in Sources */,
-				0BEA7F7F2BE8407D00EE5359 /* Person+CoreDataProperties.swift in Sources */,
+				0BEA7F8B2BE842F200EE5359 /* TableViewCell.swift in Sources */,
 				0BEA7F7E2BE8407D00EE5359 /* Person+CoreDataClass.swift in Sources */,
 				0BEA7F622BE83BBC00EE5359 /* AppDelegate.swift in Sources */,
 				0BEA7F642BE83BBC00EE5359 /* SceneDelegate.swift in Sources */,
+				0BEA7F8D2BE8430400EE5359 /* TableView.swift in Sources */,
+				0BEA7F932BE8446100EE5359 /* CoreDataManager.swift in Sources */,
+				0BEA7F852BE8429B00EE5359 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
