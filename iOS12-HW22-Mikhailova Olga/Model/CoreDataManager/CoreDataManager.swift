@@ -19,23 +19,28 @@ final class CoreDataManager {
     
     static let shared = CoreDataManager()
     var savedEntities = [Person]()
+   // private init() { }
     
     // создаем контекст
      lazy var context: NSManagedObjectContext = {
         persistentContainer.viewContext
     }()
     
+    
     // описываем сущность с которой будем работать
     func entityForName(entityName: String) -> NSEntityDescription {
-        return NSEntityDescription.entity(forEntityName: Constants.entity.rawValue, in: context) ?? NSEntityDescription()
+        let i = entityName
+        if i.isEmpty {
+            return NSEntityDescription.entity(forEntityName: "Person", in: context) ?? NSEntityDescription()
+        } else {
+            return NSEntityDescription.entity(forEntityName: Constants.entity.rawValue, in: context) ?? NSEntityDescription()
+        }
     }
-    
-    private init() { }
     
     // MARK: Core Data stack
     // контейнер
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "HW22")
+        let container = NSPersistentContainer(name: "iOS12_HW22_Mikhailova_Olga")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -49,13 +54,13 @@ final class CoreDataManager {
         let sortDescriptor = NSSortDescriptor(key: sortKey, ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        let fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataManager.shared.context, sectionNameKeyPath: nil, cacheName: nil)
+        let fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
         return fetchResultController
     }
     
     // добавляем персон
-    func addPerson(name: String, surname: String, birthdayDate: Date, photo: Data, gender: String) {
+    func addPerson(name: String?, surname: String?, birthdayDate: Date?, photo: Data?, gender: String?) {
         let newPerson = Person(context: persistentContainer.viewContext)
         newPerson.name = name
         newPerson.birthdayDate = birthdayDate
