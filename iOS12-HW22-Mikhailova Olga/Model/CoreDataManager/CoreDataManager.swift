@@ -17,9 +17,9 @@ enum Constants: String {
 
 final class CoreDataManager {
     
-    static let shared = CoreDataManager()
+   // static let shared = CoreDataManager()
     var savedEntities = [Person]()
-   // private init() { }
+ 
     
     // создаем контекст
      lazy var context: NSManagedObjectContext = {

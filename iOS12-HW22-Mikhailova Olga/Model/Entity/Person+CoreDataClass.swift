@@ -14,7 +14,7 @@ public class Person: NSManagedObject {
   
     // для создания объекта
     convenience init() {
-        self.init(entity: CoreDataManager.shared.entityForName(entityName: Constants.entity.rawValue), insertInto: CoreDataManager.shared.context)
+        self.init(entity: managerCoreData.entityForName(entityName: Constants.entity.rawValue), insertInto: managerCoreData.context)
     }
 }
 
