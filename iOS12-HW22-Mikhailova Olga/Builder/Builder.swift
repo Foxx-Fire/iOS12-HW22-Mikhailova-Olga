@@ -6,11 +6,12 @@
 //
 
 import UIKit
+let managerCoreData = CoreDataManager()
 
 class Builder {
     static func module() -> UIViewController {
         let view = ViewController()
-        let manager = CoreDataManager.shared
+        let manager = managerCoreData
         let model = Person()
         let presenter = Presenter(view: view, manager: manager, model: model)
         view.presenter = presenter

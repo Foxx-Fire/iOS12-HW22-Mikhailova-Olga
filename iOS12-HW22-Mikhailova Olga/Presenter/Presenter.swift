@@ -37,7 +37,7 @@ final class Presenter: PresenterProtocol {
         self.view = view
         self.manager = manager
         self.model = model
-        fetchResultController = CoreDataManager.shared.fetchResultController(entityName: Constants.entity.rawValue, sortKey: Constants.sortKey.rawValue)
+        fetchResultController = managerCoreData.fetchResultController(entityName: Constants.entity.rawValue, sortKey: Constants.sortKey.rawValue)
     }
     
     func createNewObject(text: String?, picture: Data?, gender: String?) {
