@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     var presenter: PresenterProtocol?
     
@@ -51,10 +51,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemGray2
         presenter?.fetchResultController.delegate = self
+        textField.delegate = self
         
         setupView()
         setupHierarchy()
         setupLayout()
+        keyboardAppear()
         guesture()
         
         // выборка данных из базы
@@ -64,18 +66,7 @@ class ViewController: UIViewController {
             print(error)
         }
     }
-    
-    func guesture() {
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
-        recognizer.numberOfTapsRequired = 1
-        recognizer.numberOfTouchesRequired = 1
-        scrollView.addGestureRecognizer(recognizer)
-    }
-    
-    @objc func touch() {
-        self.view.endEditing(true)
-    }
-    
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadTable()
@@ -130,6 +121,34 @@ class ViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
         ])
     }
+    
+    //MARK: Keyboard
+  
+    private func keyboardAppear() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+  
+    func guesture() {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
+        recognizer.numberOfTapsRequired = 1
+        recognizer.numberOfTouchesRequired = 1
+        view.addGestureRecognizer(recognizer)
+        scrollView.addGestureRecognizer(recognizer)
+    }
+    
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+    
+    @objc func touch() {
+        self.view.endEditing(true)
+    }
+
+    @objc func keyboardWillShow(sender: Notification) { }
+    
+    @objc func keyboardWillHide(sender: Notification) { }
 }
 
 extension ViewController: UITableViewDataSource {

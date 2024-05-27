@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class DetailView: UIViewController{
+class DetailView: UIViewController, UITextFieldDelegate {
     
     var presenter: DetailViewProtocol?
     var isEdit = false
@@ -71,23 +71,15 @@ class DetailView: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        [name, birthday, gender].forEach{$0.delegate = self}
+        
         setupHierarchy()
         setupLayout()
         setupNavigationBar()
         contentIsEdit(isEdit: isEdit)
         setup()
+        keyboardAppear()
         guesture()
-    }
-    
-    func guesture() {
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
-        recognizer.numberOfTapsRequired = 1
-        recognizer.numberOfTouchesRequired = 1
-        scrollView.addGestureRecognizer(recognizer)
-    }
-    
-    @objc func touch() {
-        self.view.endEditing(true)
     }
     
     override func viewDidLayoutSubviews() {
@@ -163,6 +155,52 @@ class DetailView: UIViewController{
         let alert = UIAlertController(title: "No worries", message: "You can decide later", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
         present(alert, animated: true, completion:  nil)
+    }
+    
+    //MARK: Keyboard
+    
+    func guesture() {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.touch))
+        recognizer.numberOfTapsRequired = 1
+        recognizer.numberOfTouchesRequired = 1
+        scrollView.addGestureRecognizer(recognizer)
+    }
+    
+    @objc func touch() {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+         textField.resignFirstResponder()
+         return false
+     }
+
+    private func keyboardAppear() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
+    @objc func keyboardWillShow(sender: Notification) {
+        guard let userInfo = sender.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+              let currentTextField = UIResponder.currentFirst() as? UITextField else { return }
+        
+        // check in is top of kb is above the bottom of current tf
+        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
+        let convertedTextFieldFrame = view.convert(currentTextField.frame, from: currentTextField.superview)
+        let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
+        
+        //if tf bottom is below kb bottom - move the frame up
+        if textFieldBottomY > keyboardTopY {
+            let textBoxY = convertedTextFieldFrame.origin.y
+            let newFrameY = (textBoxY - keyboardTopY / 2) * -1
+            view.frame.origin.y = newFrameY
+        }
+    }
+    
+    @objc func keyboardWillHide(sender: Notification) {
+        view.frame.origin.y = 0
     }
 }
 
