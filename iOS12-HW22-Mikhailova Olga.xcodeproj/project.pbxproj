@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC55DA12C04E9BC0093C49E /* ExtensionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC55DA02C04E9BC0093C49E /* ExtensionResponder.swift */; };
 		0BEA7F622BE83BBC00EE5359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F612BE83BBC00EE5359 /* AppDelegate.swift */; };
 		0BEA7F642BE83BBC00EE5359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F632BE83BBC00EE5359 /* SceneDelegate.swift */; };
 		0BEA7F662BE83BBC00EE5359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7F652BE83BBC00EE5359 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BC55DA02C04E9BC0093C49E /* ExtensionResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionResponder.swift; sourceTree = "<group>"; };
 		0BEA7F5E2BE83BBC00EE5359 /* iOS12-HW22-Mikhailova Olga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS12-HW22-Mikhailova Olga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEA7F612BE83BBC00EE5359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEA7F632BE83BBC00EE5359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				0BEA7F8E2BE843DF00EE5359 /* ExtensionDate.swift */,
 				0BEA7F902BE8441800EE5359 /* ExtensionTextField.swift */,
+				0BC55DA02C04E9BC0093C49E /* ExtensionResponder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				0BEA7F7E2BE8407D00EE5359 /* Person+CoreDataClass.swift in Sources */,
 				0BEA7F622BE83BBC00EE5359 /* AppDelegate.swift in Sources */,
 				0BEA7F642BE83BBC00EE5359 /* SceneDelegate.swift in Sources */,
+				0BC55DA12C04E9BC0093C49E /* ExtensionResponder.swift in Sources */,
 				0BEA7F8D2BE8430400EE5359 /* TableView.swift in Sources */,
 				0BEA7F932BE8446100EE5359 /* CoreDataManager.swift in Sources */,
 				0BEA7F852BE8429B00EE5359 /* Builder.swift in Sources */,
