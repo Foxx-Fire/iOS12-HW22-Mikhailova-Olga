@@ -188,10 +188,10 @@ extension DetailView {
             person.photo = photo.image?.pngData()
             person.name = name.text ?? ""
             person.birthdayDate? = birthday.text?.date() ?? Date.now
-            CoreDataManager.shared.saveContext()
+            managerCoreData.saveContext()
             if gender.text == "Man" || gender.text == "Woman" {
                 person.gender = gender.text
-                CoreDataManager.shared.saveContext()
+                managerCoreData.saveContext()
             } else {
                 otherTapped()
             }
